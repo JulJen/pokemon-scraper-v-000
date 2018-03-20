@@ -23,7 +23,8 @@ class Pokemon
     db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
   end
 
-  # def self.find(id, db)
-  #   pokemon = db.execute()
+  def self.find(id, db)
+    pokemon = db.execute("SELECT * FROM pokemon")
+  end
 
 end
