@@ -25,13 +25,17 @@ class Pokemon
   end
 
   def self.find(id, db)
-    pokemon = db.execute("SELECT * FROM pokemon WHERE id = ?", id).first
-# binding.pry
-    self.new(db: db, id: pokemon[0], name: pokemon[1], type: pokemon[2])
-    #  hp: pokemon[3])
-    # @db=nil, @hp=nil, @id=nil, @name=nil, @type=nil>
-    # ("Pikachu", "electric", @db)
-  end
+    poke_info = db.execute("SELECT * FROM pokemon WHERE id = ?", id).flatten
+    Pokemon.new(id: poke_info[0], name: poke_info[1], type: poke_info[2], hp: poke_info[3], db: db)
+end
+#   def self.find(id, db)
+#     pokemon = db.execute("SELECT * FROM pokemon WHERE id = ?", id).first
+# # binding.pry
+#     self.new(db: db, id: pokemon[0], name: pokemon[1], type: pokemon[2])
+#     #  hp: pokemon[3])
+#     # @db=nil, @hp=nil, @id=nil, @name=nil, @type=nil>
+#     # ("Pikachu", "electric", @db)
+#   end
 end
 
 # describe ".find" do
