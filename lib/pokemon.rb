@@ -23,7 +23,7 @@ class Pokemon
   end
 
   def self.find(id, db)
-    pokemon = 
+    pokemon = db.execute()
 
 
 end
