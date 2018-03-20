@@ -43,7 +43,7 @@ describe "Pokemon" do
   describe "BONUS" do
 
     before do
-      @sql_runner.execute_alter_hp_migration
+      @sql_runner.execute_alter_hp_migration_sql
       Pokemon.save('Pikachu', 'electric', @db)
       Pokemon.save('Magikarp', 'water', @db)
     end
