@@ -23,6 +23,7 @@ class Pokemon
   end
 
   def self.find(id, db)
+    pokemon = 
 
 
 end
