@@ -26,5 +26,16 @@ class Pokemon
   def self.find(id, db)
     pokemon = db.execute("SELECT * FROM pokemon WHERE id = ?")
   end
-
 end
+
+# describe ".find" do
+#   it 'finds a pokemon from the database by their id number and returns a new Pokemon object' do
+#     # The find method creates a new Pokemon after selecting their row from the database by their id number.
+#     Pokemon.save("Pikachu", "electric", @db)
+#
+#     pikachu_from_db = Pokemon.find(1, @db)
+#     expect(pikachu_from_db.id).to eq(1)
+#     expect(pikachu_from_db.name).to eq("Pikachu")
+#     expect(pikachu_from_db.type).to eq("electric")
+#   end
+# end
