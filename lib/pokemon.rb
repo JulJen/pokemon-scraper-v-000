@@ -1,4 +1,5 @@
 # build out the methods to save and find pokemon in the database.
+require 'pry'
 
 class Pokemon
 
